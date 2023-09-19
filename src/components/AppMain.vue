@@ -168,12 +168,13 @@ export default {
 
 main {
   section {
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
   }
   section.jumbotron {
     background-image: url("../../public/img/layout/cielostellato.PNG");
     background-size: 100vw;
     background-position: bottom;
+    margin: 0;
   }
 }
 
