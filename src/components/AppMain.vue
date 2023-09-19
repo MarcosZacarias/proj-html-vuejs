@@ -1,6 +1,5 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
-
+import Listcard from "./Cards/Listcard.vue";
 export default {
   data() {
     return {
@@ -18,17 +17,32 @@ export default {
           img: "../../public/img/layout/h3-rev-img-6.png",
         },
       ],
+      cardImages: [
+        {
+          imgPath: "../../public/img/layout/h3-img-1.jpg",
+        },
+        {
+          imgPath: "../../../public/img/layout/h3-img-2.jpg",
+        },
+        {
+          imgPath: "../../public/img/layout/h3-img-3.jpg",
+        },
+        {
+          imgPath: "../../public/img/layout/h3-img-4.jpg",
+        },
+      ],
     };
   },
 
-  // components: {
-  //   MyComponent,
-  // },
+  components: {
+    Listcard,
+  },
 };
 </script>
 
 <template>
   <main>
+    <!-- Section jumbotron -->
     <section class="jumbotron">
       <div class="btn btn-primary">prev</div>
       <div class="jumbo-container">
@@ -37,7 +51,10 @@ export default {
       </div>
       <div class="btn btn-primary">next</div>
     </section>
-    <section></section>
+    <!-- Section card images -->
+    <section>
+      <Listcard :listImages="cardImages" class="py-2" />
+    </section>
     <section></section>
     <section></section>
     <section></section>
