@@ -38,6 +38,33 @@ export default {
           img: "../../public/img/layout/h3-rev-img-2.png",
         },
       ],
+      listOfferts: [
+        {
+          title: "Specials*",
+          description:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+          offerts: [
+            {
+              price: "10",
+              name: "combo piccolo",
+              description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+            },
+            {
+              price: "20",
+              name: "combo mezzo",
+              description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+            },
+            {
+              price: "30",
+              name: "combo grande",
+              description:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+            },
+          ],
+        },
+      ],
     };
   },
 
@@ -63,7 +90,24 @@ export default {
       <Carousel :screenImages="testimonials" />
     </section>
     <!-- Section Special Pizza -->
-    <section></section>
+    <section class="d-flex">
+      <div class="w-50">
+        <img src="../../public/img/layout/h1-img-4.jpg" alt="" />
+      </div>
+      <div class="w-50 d-flex justify-content-center align-items-center">
+        <ul>
+          <li>{{ listOfferts[0].title }}</li>
+          <li class="pb-2">{{ listOfferts[0].description }}</li>
+          <li v-for="offert in listOfferts[0].offerts" class="d-flex gap-2">
+            <div>&dollar; {{ offert.price }}</div>
+            <div>
+              <p>{{ offert.name }}</p>
+              <p>{{ offert.description }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
