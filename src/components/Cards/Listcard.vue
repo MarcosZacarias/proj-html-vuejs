@@ -18,8 +18,10 @@ export default {
 </script>
 
 <template>
-  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-2">
-    <Card v-for="image in listImages" class="col" :cardImage="image" />
+  <div class="container-fluid">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-2">
+      <Card v-for="image in listImages" class="col" :cardImage="image" />
+    </div>
   </div>
 </template>
 
