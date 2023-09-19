@@ -65,6 +65,20 @@ export default {
           ],
         },
       ],
+      cardPersons: [
+        {
+          imgPath: "../../public/img/layout/h1-team-1a-700x700.jpg",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-team-2a.jpg",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-team-3a.jpg",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-team-4a.jpg",
+        },
+      ],
     };
   },
 
@@ -108,8 +122,14 @@ export default {
         </ul>
       </div>
     </section>
-    <section></section>
-    <section></section>
+    <!-- Section image cubism -->
+    <section>
+      <img src="../../public/img/layout/h3-background-img.jpg" alt="" />
+    </section>
+    <!-- Section card persons -->
+    <section>
+      <Listcard :listImages="cardPersons" />
+    </section>
     <section></section>
     <section></section>
     <section></section>
