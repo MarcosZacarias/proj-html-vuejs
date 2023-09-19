@@ -22,7 +22,7 @@ export default {
           imgPath: "../../public/img/layout/h3-img-1.jpg",
         },
         {
-          imgPath: "../../../public/img/layout/h3-img-2.jpg",
+          imgPath: "../../public/img/layout/h3-img-2.jpg",
         },
         {
           imgPath: "../../public/img/layout/h3-img-3.jpg",
@@ -53,7 +53,7 @@ export default {
     </section>
     <!-- Section card images -->
     <section>
-      <Listcard :listImages="cardImages" class="py-2" />
+      <Listcard :listImages="cardImages" />
     </section>
     <section></section>
     <section></section>

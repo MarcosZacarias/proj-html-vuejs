@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div>
-    <img src="" alt="" />
+    <img :src="cardImage.imgPath" alt="" />
   </div>
 </template>
 
