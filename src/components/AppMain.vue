@@ -18,7 +18,7 @@ export default {
           img: "../../public/img/layout/h3-rev-img-6.png",
         },
       ],
-      cardImages: [
+      cardsImages: [
         {
           imgPath: "../../public/img/layout/h3-img-1.jpg",
         },
@@ -65,7 +65,7 @@ export default {
           ],
         },
       ],
-      cardPersons: [
+      cardsPersons: [
         {
           imgPath: "../../public/img/layout/h1-team-1a-700x700.jpg",
         },
@@ -77,6 +77,23 @@ export default {
         },
         {
           imgPath: "../../public/img/layout/h1-team-4a.jpg",
+        },
+      ],
+      cardsClients: [
+        {
+          imgPath: "../../public/img/layout/h1-clients-img-1.png",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-clients-img-2.png",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-clients-img-3.png",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-clients-img-4.png",
+        },
+        {
+          imgPath: "../../public/img/layout/h1-clients-img-5.png",
         },
       ],
     };
@@ -97,7 +114,7 @@ export default {
     </section>
     <!-- Section card images -->
     <section>
-      <Listcard :listImages="cardImages" />
+      <Listcard :listImages="cardsImages" />
     </section>
     <!-- Section carousel testimonials -->
     <section class="carousel">
@@ -128,9 +145,18 @@ export default {
     </section>
     <!-- Section card persons -->
     <section>
-      <Listcard :listImages="cardPersons" />
+      <Listcard :listImages="cardsPersons" />
     </section>
-    <section></section>
+    <!-- Section card clients -->
+    <section class="logo-clients">
+      <div class="container">
+        <div class="row">
+          <div v-for="client in cardsClients" class="col">
+            <img :src="client.imgPath" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
@@ -149,5 +175,10 @@ main {
     background-size: 100vw;
     background-position: bottom;
   }
+}
+
+.logo-clients {
+  background-color: #f7f7f2;
+  padding: 4rem 0;
 }
 </style>
