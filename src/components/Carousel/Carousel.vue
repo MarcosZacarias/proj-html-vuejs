@@ -20,9 +20,14 @@ export default {
 
 <template>
   <div class="btn btn-primary">prev</div>
-  <div class="screen-container">
-    <img :src="screenImages[0].bgImg" alt="" class="screen-bg-img" />
-    <img :src="screenImages[0].img" alt="" class="screen-img" />
+  <div class="carousel-container">
+    <img :src="screenImages[0].bgImg" alt="" class="carousel-bg-img" />
+    <img
+      v-if="screenImages[0].img"
+      :src="screenImages[0].img"
+      alt=""
+      class="carousel-img"
+    />
   </div>
   <div class="btn btn-primary">next</div>
 </template>

@@ -32,6 +32,12 @@ export default {
           imgPath: "../../public/img/layout/h3-img-4.jpg",
         },
       ],
+      testimonials: [
+        {
+          bgImg: "../../public/img/layout/h3-testimonials-bckgrnd.jpg",
+          img: "../../public/img/layout/h3-rev-img-2.png",
+        },
+      ],
     };
   },
 
@@ -45,14 +51,18 @@ export default {
 <template>
   <main>
     <!-- Section jumbotron -->
-    <section class="jumbotron">
+    <section class="jumbotron carousel">
       <Carousel :screenImages="jumbotron" />
     </section>
     <!-- Section card images -->
     <section>
       <Listcard :listImages="cardImages" />
     </section>
-    <section></section>
+    <!-- Section carousel testimonials -->
+    <section class="carousel">
+      <Carousel :screenImages="testimonials" />
+    </section>
+    <!-- Section Special Pizza -->
     <section></section>
     <section></section>
     <section></section>
@@ -67,18 +77,13 @@ export default {
 @use "../style/partials/mixins" as *;
 
 main {
+  section {
+    margin: 1rem 0 1rem 0;
+  }
   section.jumbotron {
-    width: 100%;
-
     background-image: url("../../public/img/layout/cielostellato.PNG");
     background-size: 100vw;
     background-position: bottom;
-
-    padding: 1rem 0 3rem 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 </style>

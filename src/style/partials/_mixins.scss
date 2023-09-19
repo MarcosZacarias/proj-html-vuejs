@@ -1,15 +1,24 @@
-.screen-container {
-  width: 50%;
-  margin: auto;
-  position: relative;
+.carousel {
+  width: 100%;
+
+  padding: 1rem 0 3rem 0;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  .screen-bg-img {
-    position: absolute;
-  }
-  .screen-img {
-    width: 35%;
-    z-index: 2;
+  .carousel-container {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carousel-bg-img {
+      position: absolute;
+    }
+    .carousel-img {
+      width: 35%;
+      z-index: 2;
+    }
   }
 }
