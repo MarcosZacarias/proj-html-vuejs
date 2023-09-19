@@ -1,5 +1,6 @@
 <script>
 import Listcard from "./Cards/Listcard.vue";
+import Carousel from "./Carousel/Carousel.vue";
 export default {
   data() {
     return {
@@ -36,6 +37,7 @@ export default {
 
   components: {
     Listcard,
+    Carousel,
   },
 };
 </script>
@@ -44,12 +46,7 @@ export default {
   <main>
     <!-- Section jumbotron -->
     <section class="jumbotron">
-      <div class="btn btn-primary">prev</div>
-      <div class="jumbo-container">
-        <img :src="jumbotron[0].bgImg" alt="" class="jumbo-bg-img" />
-        <img :src="jumbotron[0].img" alt="" class="jumbo-img" />
-      </div>
-      <div class="btn btn-primary">next</div>
+      <Carousel :screenImages="jumbotron" />
     </section>
     <!-- Section card images -->
     <section>
@@ -67,15 +64,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixins" as *;
+
 main {
   section.jumbotron {
-    // height: 200px;
     width: 100%;
 
     background-image: url("../../public/img/layout/cielostellato.PNG");
     background-size: 100vw;
-    // background-repeat: no-repeat;
-
     background-position: bottom;
 
     padding: 1rem 0 3rem 0;
@@ -83,22 +79,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .jumbo-container {
-      width: 50%;
-      margin: auto;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .jumbo-bg-img {
-        position: absolute;
-      }
-      .jumbo-img {
-        width: 35%;
-        z-index: 2;
-      }
-    }
   }
 }
 </style>

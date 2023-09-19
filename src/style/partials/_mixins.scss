@@ -1,1 +1,15 @@
-
+.screen-container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .screen-bg-img {
+    position: absolute;
+  }
+  .screen-img {
+    width: 35%;
+    z-index: 2;
+  }
+}
