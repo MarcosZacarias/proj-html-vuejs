@@ -1,21 +1,26 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+// Import macro-components
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   data() {
-    return {
-      title: "Hello world",
-    };
+    return {};
   },
-
-  // components: {
-  //   MyComponent,
-  // },
+  // Add componets:
+  components: {
+    AppHeader,
+    AppMain,
+    AppFooter,
+  },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style lang="scss" scoped></style>
