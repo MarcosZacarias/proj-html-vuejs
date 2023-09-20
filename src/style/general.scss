@@ -31,6 +31,12 @@ body {
 
 // Utils
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .center-column {
   display: flex;
   flex-direction: column;

@@ -162,7 +162,7 @@ export default {
     <section class="carousel">
       <Carousel :screenImages="testimonials" />
     </section>
-    <!-- Section Special Pizza -->
+    <!-- Section Special Product -->
     <section class="d-flex">
       <div class="w-50">
         <img src="../../public/img/layout/h1-img-4.jpg" alt="" />
@@ -199,7 +199,7 @@ export default {
         </div>
       </div>
     </section>
-    <!-- Section choose pizza -->
+    <!-- Section choose Product -->
     <section>
       <div class="text-center title-product">
         <span>{{ product.subtitleProduct }}</span>
@@ -252,7 +252,51 @@ export default {
         <img src="../../public/img/layout/h3-img-5a.jpg" alt="" />
       </div>
     </section>
-    <section></section>
+    <!-- Section book table -->
+    <section>
+      <div class="container-fluid book-table-bg center">
+        <div class="center book-table">
+          <div class="input-table">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div>
+            <div class="center">For</div>
+          </div>
+          <div class="input-table">
+            <div class="form-group">
+              <label class="active" for="dateStandard">Datepicker</label>
+              <input
+                type="date"
+                id="dateStandard"
+                name="dateStandard"
+                :placeholder="Date.now()"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="center">At</div>
+          </div>
+
+          <div class="input-table">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+
+          <div>
+            <button class="btn btn-primary">Book a table</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 

@@ -73,3 +73,23 @@
   justify-content: center;
   align-items: center;
 }
+
+.book-table-bg {
+  background-image: url("../../../public/img/layout/h3-background-img-3.jpg");
+  height: 250px;
+}
+
+.book-table {
+  width: 75%;
+  margin: auto;
+  align-items: center;
+  gap: 3rem;
+  .input-table {
+    width: 20%;
+    padding: 1rem;
+  }
+}
+
+.form-select {
+  background-image: url("../../../public/img/icons-svg/svg-1.svg");
+}
