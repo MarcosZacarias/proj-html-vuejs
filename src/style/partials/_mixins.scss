@@ -22,3 +22,41 @@
     }
   }
 }
+
+.title-product {
+  width: 50%;
+  margin: 5rem auto;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: #d2401e;
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+  h4 {
+    font-size: x-large;
+    font-weight: bold;
+  }
+  p {
+    text-transform: none;
+    color: #757575;
+    font-size: 0.8rem;
+  }
+}
+
+.card-product {
+  .card-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #b1862b;
+    .prices {
+      color: #d2401e;
+      .old-price {
+        color: rgba($color: #757575, $alpha: 0.4);
+        text-decoration: line-through;
+      }
+    }
+  }
+}

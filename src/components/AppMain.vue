@@ -96,6 +96,48 @@ export default {
           imgPath: "../../public/img/layout/h1-clients-img-5.png",
         },
       ],
+
+      product: {
+        subtitleProduct: "Choose Your Flavor",
+        titleProduct: "The Best Pizza Menu in Town",
+        description:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam animi architecto eveniet doloribus quod sint?",
+        listProducts: [
+          {
+            img: "../../public/img/layout/h3-product-img-1a-100x100.png",
+            name: "Bismarck",
+            oldPrice: "50.00",
+            price: "30.00",
+          },
+          {
+            img: "../../public/img/layout/h3-product-img-2a-150x150.png",
+            name: "Fiori di zucca",
+            price: "7.00",
+            maxPrice: "50.00",
+          },
+          {
+            img: "../../public/img/layout/h3-product-img-3a-150x150.png",
+            name: "Valdostana",
+            price: "55.00",
+          },
+          {
+            img: "../../public/img/layout/h3-product-img-4a-150x150.png",
+            name: "Pizza Tartufata",
+            price: "45.00",
+          },
+          {
+            img: "../../public/img/layout/h3-product-img-5a-150x150.png",
+            name: "Francescana",
+            price: "25.00",
+          },
+          {
+            img: "../../public/img/layout/h3-product-img-6a-100x100.png",
+            name: "Campagnola",
+            price: "50.00",
+            maxPrice: "95.00",
+          },
+        ],
+      },
     };
   },
 
@@ -157,7 +199,40 @@ export default {
         </div>
       </div>
     </section>
-    <section></section>
+    <!-- Section choose pizza -->
+    <section>
+      <div class="text-center title-product">
+        <span>{{ product.subtitleProduct }}</span>
+        <h4 class="mb-2">{{ product.titleProduct }}</h4>
+        <p>{{ product.description }}</p>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row gap-5">
+          <div v-for="product in product.listProducts" class="col">
+            <div class="card-product">
+              <div class="card-media">
+                <img :src="product.img" alt="" />
+              </div>
+              <div class="card-text center-column">
+                <p>{{ product.name }}</p>
+                <p class="prices">
+                  <span v-if="product.oldPrice" class="old-price"
+                    >&dollar; {{ product.oldPrice }}
+                  </span>
+                  <span v-if="product.price" class="normal-price">
+                    &dollar; {{ product.price }}
+                  </span>
+                  <span v-if="product.maxPrice" class="max-price">
+                    - &dollar; {{ product.maxPrice }}</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
     <section></section>
   </main>
