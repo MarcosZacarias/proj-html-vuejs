@@ -233,7 +233,25 @@ export default {
         </div>
       </div>
     </section>
-    <section></section>
+    <!-- Section events -->
+    <section class="d-flex">
+      <div class="events">
+        <ul>
+          <li>{{ listOfferts[0].title }}</li>
+          <li class="pb-2">{{ listOfferts[0].description }}</li>
+          <li v-for="offert in listOfferts[0].offerts" class="d-flex gap-2">
+            <div>&dollar; {{ offert.price }}</div>
+            <div>
+              <p>{{ offert.name }}</p>
+              <p>{{ offert.description }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="w-50">
+        <img src="../../public/img/layout/h3-img-5a.jpg" alt="" />
+      </div>
+    </section>
     <section></section>
   </main>
 </template>
