@@ -187,7 +187,7 @@ export default {
           </div>
 
           <div>
-            <button class="btn btn-primary">Book a table</button>
+            <button class="btn-principal">Book a table</button>
           </div>
         </div>
       </div>

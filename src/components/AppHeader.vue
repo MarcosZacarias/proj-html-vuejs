@@ -54,7 +54,7 @@ export default {
     <div class="container d-flex justify-content-between align-items-center">
       <!-- Button -->
       <div>
-        <button>Order online</button>
+        <button class="btn-principal">Order online</button>
       </div>
 
       <!-- Navbar -->
