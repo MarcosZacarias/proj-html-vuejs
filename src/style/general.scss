@@ -65,6 +65,31 @@ body {
   }
 }
 
+.testimonials {
+  background-image: url("../../public/img/layout/h3-testimonials-bckgrnd.jpg");
+  background-position: center;
+  height: 400px;
+  position: relative;
+  .carousel-testimonials {
+    width: 50%;
+    p {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .quote-icon {
+      font-size: 5rem;
+      color: #b1862b;
+    }
+    .quote-source {
+      font-size: 0.6rem;
+      color: #d2401e;
+    }
+  }
+}
+
 section.specials {
   height: 700px;
   display: flex;
@@ -217,8 +242,6 @@ section.events {
 .book-table-bg {
   background-image: url("../../../public/img/layout/h3-background-img-3.jpg");
   height: 250px;
-  .input-persons {
-  }
 }
 
 .book-table {

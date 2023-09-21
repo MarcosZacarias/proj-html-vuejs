@@ -27,12 +27,20 @@ const mainDataLayout = {
       imgPath: "../../public/img/layout/h3-img-4.jpg",
     },
   ],
-  testimonials: [
-    {
-      bgImg: "../../public/img/layout/h3-testimonials-bckgrnd.jpg",
-      img: "../../public/img/layout/h3-rev-img-2.png",
-    },
-  ],
+  testimonials: {
+    bgImg: "../../public/img/layout/h3-testimonials-bckgrnd.jpg",
+    img: "../../public/img/layout/h3-rev-img-2.png",
+
+    quotes: [
+      {
+        quote:
+          "Forget the trendy pizza shops, this hidden spot makes the best new York-Style Pizza slice in Naples",
+        source: "Washington Post 2018",
+        quoteIcon: ["fas", "quote-left"],
+      },
+    ],
+  },
+
   listOfferts: [
     {
       title: "Specials*",

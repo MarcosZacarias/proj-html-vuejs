@@ -32,8 +32,21 @@ export default {
       <Listcard :listImages="mainDataLayout.cardsImages" />
     </section>
     <!-- Section carousel testimonials -->
-    <section class="carousel">
-      <Carousel :screenImages="mainDataLayout.testimonials" />
+    <section class="testimonials center">
+      <button class="btn-carousel btn-prev">prev</button>
+      <div class="carousel-testimonials">
+        <p class="quote-icon">
+          <font-awesome-icon
+            :icon="mainDataLayout.testimonials.quotes[0].quoteIcon"
+          />
+        </p>
+
+        <p class="quote">"{{ mainDataLayout.testimonials.quotes[0].quote }}"</p>
+        <p class="quote-source">
+          {{ mainDataLayout.testimonials.quotes[0].source }}
+        </p>
+      </div>
+      <button class="btn-carousel btn-next">next</button>
     </section>
     <!-- Section Special Product -->
     <section class="specials">
