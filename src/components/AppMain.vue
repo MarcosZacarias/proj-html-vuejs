@@ -42,25 +42,25 @@ export default {
         {
           title: "Specials*",
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
           offerts: [
             {
               price: "10",
               name: "combo piccolo",
               description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
             },
             {
               price: "20",
               name: "combo mezzo",
               description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
             },
             {
               price: "30",
               name: "combo grande",
               description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, repellat!",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
             },
           ],
         },
@@ -163,25 +163,27 @@ export default {
       <Carousel :screenImages="testimonials" />
     </section>
     <!-- Section Special Product -->
-    <section class="d-flex">
-      <div class="w-50">
-        <img src="../../public/img/layout/h1-img-4.jpg" alt="" />
+    <section class="specials">
+      <div class="specials-aside">
+        <img src="../../public/img/layout/h1-img-7n.png" alt="" class="" />
       </div>
-      <div class="w-50 d-flex justify-content-center align-items-center">
+      <div class="specials-main">
         <ul>
-          <li>{{ listOfferts[0].title }}</li>
-          <li class="pb-2">{{ listOfferts[0].description }}</li>
+          <li class="special-text">{{ listOfferts[0].title }}</li>
+          <li class="pb-2 description">
+            {{ listOfferts[0].description }}
+          </li>
           <li v-for="offert in listOfferts[0].offerts" class="d-flex gap-2">
-            <div>&dollar; {{ offert.price }}</div>
+            <div class="col-1 special-price">&dollar;{{ offert.price }}</div>
             <div>
-              <p>{{ offert.name }}</p>
-              <p>{{ offert.description }}</p>
+              <p class="special-text secondary">{{ offert.name }}</p>
+              <p class="description">{{ offert.description }}</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    <!-- Section image cubism -->
+    <!-- Section image all-screen -->
     <section>
       <img src="../../public/img/layout/h3-background-img.jpg" alt="" />
     </section>
