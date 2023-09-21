@@ -217,6 +217,8 @@ section.events {
 .book-table-bg {
   background-image: url("../../../public/img/layout/h3-background-img-3.jpg");
   height: 250px;
+  .input-persons {
+  }
 }
 
 .book-table {
@@ -224,12 +226,35 @@ section.events {
   margin: auto;
   align-items: center;
   gap: 3rem;
-  .input-table {
-    width: 20%;
-    padding: 1rem;
-  }
-}
 
-.form-select {
-  background-image: url("../../../public/img/icons-svg/svg-1.svg");
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  .input-table {
+    width: 190px;
+    height: 48.8px;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 2px solid black;
+
+    color: #757575;
+    background-color: #ffffff;
+
+    font-weight: normal;
+
+    .form-select {
+      color: #757575;
+
+      background-image: url("");
+      border: none;
+    }
+
+    span {
+      color: #b1862b;
+    }
+  }
 }

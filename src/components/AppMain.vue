@@ -151,27 +151,27 @@ export default {
     <section>
       <div class="container-fluid book-table-bg center">
         <div class="center book-table">
-          <div class="input-table">
+          <div class="input-table input-persons">
             <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option
+                v-for="n in mainDataLayout.bookTable.persons.maxPerson"
+                :value="n"
+              >
+                {{ n }} Persons
+              </option>
             </select>
+            <span class="pe-1">
+              <font-awesome-icon :icon="['fas', 'user-group']" />
+            </span>
           </div>
           <div>
             <div class="center">For</div>
           </div>
-          <div class="input-table">
-            <div class="form-group">
-              <label class="active" for="dateStandard">Datepicker</label>
-              <input
-                type="date"
-                id="dateStandard"
-                name="dateStandard"
-                :placeholder="Date.now()"
-              />
-            </div>
+          <div class="input-table gap-1">
+            <div>11/29/2020</div>
+            <span>
+              <font-awesome-icon :icon="['fas', 'calendar-days']" />
+            </span>
           </div>
           <div>
             <div class="center">At</div>
@@ -179,11 +179,16 @@ export default {
 
           <div class="input-table">
             <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option
+                v-for="hour in mainDataLayout.bookTable.hours"
+                :value="hour"
+              >
+                {{ hour }}
+              </option>
             </select>
+            <span class="pe-1">
+              <font-awesome-icon :icon="['fas', 'clock']" />
+            </span>
           </div>
 
           <div>
