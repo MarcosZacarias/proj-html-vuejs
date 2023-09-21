@@ -29,7 +29,11 @@ export default {
     </section>
     <!-- Section card images -->
     <section>
-      <Listcard :listImages="mainDataLayout.cardsImages" />
+      <Listcard
+        :listImages="mainDataLayout.cardsImages"
+        :cardsPhoto="true"
+        :cardsPersons="false"
+      />
     </section>
     <!-- Section carousel testimonials -->
     <section class="testimonials center">
@@ -80,7 +84,11 @@ export default {
     </section>
     <!-- Section card persons -->
     <section>
-      <Listcard :listImages="mainDataLayout.cardsPersons" />
+      <Listcard
+        :listImages="mainDataLayout.cardsPersons"
+        :cardPhoto="false"
+        :cardsPersons="true"
+      />
     </section>
     <!-- Section card clients -->
     <section class="logo-clients">

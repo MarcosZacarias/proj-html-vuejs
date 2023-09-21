@@ -9,6 +9,8 @@ export default {
 
   props: {
     listImages: Array,
+    cardsPersons: Boolean,
+    cardsPhoto: Boolean,
   },
 
   components: {
@@ -20,7 +22,13 @@ export default {
 <template>
   <div class="container-fluid">
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 my-2">
-      <Card v-for="image in listImages" class="col" :cardImage="image" />
+      <Card
+        v-for="image in listImages"
+        class="col"
+        :cardImage="image"
+        :printCardsPhoto="cardsPhoto"
+        :printCardsPersons="cardsPersons"
+      />
     </div>
   </div>
 </template>

@@ -71,15 +71,35 @@ const mainDataLayout = {
   cardsPersons: [
     {
       imgPath: "../../public/img/layout/h1-team-1a-700x700.jpg",
+      dataPerson: {
+        name: "Frank Bailey",
+        job: "Kitchen Porter",
+        socialIcons: ["twitter", "facebook-f", "instagram"],
+      },
     },
     {
       imgPath: "../../public/img/layout/h1-team-2a.jpg",
+      dataPerson: {
+        name: "Frank Bailey",
+        job: "Kitchen Porter",
+        socialIcons: ["twitter", "facebook-f", "instagram"],
+      },
     },
     {
       imgPath: "../../public/img/layout/h1-team-3a.jpg",
+      dataPerson: {
+        name: "Frank Bailey",
+        job: "Kitchen Porter",
+        socialIcons: ["twitter", "facebook-f", "instagram"],
+      },
     },
     {
       imgPath: "../../public/img/layout/h1-team-4a.jpg",
+      dataPerson: {
+        name: "Frank Bailey",
+        job: "Kitchen Porter",
+        socialIcons: ["twitter", "facebook-f", "instagram"],
+      },
     },
   ],
   cardsClients: [
