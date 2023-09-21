@@ -25,3 +25,32 @@
 
   padding: 1rem 3.5rem;
 }
+
+.btn-carousel {
+  // width: 4rem;
+
+  background-color: #ffffff;
+  color: #d2401e;
+
+  border: transparent;
+  border-radius: 10rem 10rem 0 0;
+
+  padding: 0.5rem 1rem 0;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &.btn-next {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  &.btn-prev {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+}

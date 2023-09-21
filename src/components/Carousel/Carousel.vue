@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="btn btn-primary">prev</div>
+  <button class="btn-carousel btn-prev">prev</button>
   <div class="carousel-container">
     <img :src="screenImages[0].bgImg" alt="" class="carousel-bg-img" />
     <img
@@ -29,9 +29,9 @@ export default {
       class="carousel-img"
     />
   </div>
-  <div class="btn btn-primary">next</div>
+  <button class="btn-carousel btn-next">next</button>
 </template>
 
 <style lang="scss" scoped>
-// @use "../../style/partials/mixins" as *;
+@use "../../style/partials/mixins" as *;
 </style>
