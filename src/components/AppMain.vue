@@ -1,177 +1,22 @@
 <script>
 import Listcard from "./Cards/Listcard.vue";
 import Carousel from "./Carousel/Carousel.vue";
+import { mainDataLayout } from "../data/dataStatic";
+
 export default {
   data() {
     return {
-      jumbotron: [
-        {
-          bgImg: "../../public/img/layout/h3-rev-img-1.png",
-          img: "../../public/img/layout/h3-rev-img-2.png",
-        },
-        {
-          bgImg: "../../public/img/layout/h3-rev-img-3.png",
-          img: "../../public/img/layout/h3-rev-img-4.png",
-        },
-        {
-          bgImg: "../../public/img/layout/h3-rev-img-5.png",
-          img: "../../public/img/layout/h3-rev-img-6.png",
-        },
-      ],
-      cardsImages: [
-        {
-          imgPath: "../../public/img/layout/h3-img-1.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h3-img-2.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h3-img-3.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h3-img-4.jpg",
-        },
-      ],
-      testimonials: [
-        {
-          bgImg: "../../public/img/layout/h3-testimonials-bckgrnd.jpg",
-          img: "../../public/img/layout/h3-rev-img-2.png",
-        },
-      ],
-      listOfferts: [
-        {
-          title: "Specials*",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
-          offerts: [
-            {
-              price: "10",
-              name: "combo piccolo",
-              description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
-            },
-            {
-              price: "20",
-              name: "combo mezzo",
-              description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
-            },
-            {
-              price: "30",
-              name: "combo grande",
-              description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus magnam veniam libero, dolore temporibus.",
-            },
-          ],
-        },
-      ],
-      cardsPersons: [
-        {
-          imgPath: "../../public/img/layout/h1-team-1a-700x700.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-team-2a.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-team-3a.jpg",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-team-4a.jpg",
-        },
-      ],
-      cardsClients: [
-        {
-          imgPath: "../../public/img/layout/h1-clients-img-1.png",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-clients-img-2.png",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-clients-img-3.png",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-clients-img-4.png",
-        },
-        {
-          imgPath: "../../public/img/layout/h1-clients-img-5.png",
-        },
-      ],
-
-      product: {
-        subtitleProduct: "Choose Your Flavor",
-        titleProduct: "The Best Pizza Menu in Town",
-        description:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam animi architecto eveniet doloribus quod sint?",
-        listProducts: [
-          {
-            img: "../../public/img/layout/h3-product-img-1a-100x100.png",
-            name: "Bismarck",
-            oldPrice: "50.00",
-            price: "30.00",
-          },
-          {
-            img: "../../public/img/layout/h3-product-img-2a-150x150.png",
-            name: "Fiori di zucca",
-            price: "7.00",
-            maxPrice: "50.00",
-          },
-          {
-            img: "../../public/img/layout/h3-product-img-3a-150x150.png",
-            name: "Valdostana",
-            price: "55.00",
-          },
-          {
-            img: "../../public/img/layout/h3-product-img-4a-150x150.png",
-            name: "Pizza Tartufata",
-            price: "45.00",
-          },
-          {
-            img: "../../public/img/layout/h3-product-img-5a-150x150.png",
-            name: "Francescana",
-            price: "25.00",
-          },
-          {
-            img: "../../public/img/layout/h3-product-img-6a-100x100.png",
-            name: "Campagnola",
-            price: "50.00",
-            maxPrice: "95.00",
-          },
-        ],
-      },
-
-      event: {
-        title: "Delish Pizza Deals",
-        subtitleEvent: "Made with love",
-        programEvents: [
-          {
-            dayEvent: "02",
-            monthEvent: "Nov",
-            nameEvent: "Traditional Neapolitan Pies in Kyoto Pizza Mercato",
-            addressEvent: "204 E. Piazza Tommaso",
-            iconAddress: [`fas`, `location-dot`],
-          },
-          {
-            dayEvent: "03",
-            monthEvent: "Nov",
-            nameEvent: "Terarazza Patio Dining space opening this Weekend",
-            addressEvent: "204 E. Piazza Tommaso",
-            iconAddress: [`fas`, `location-dot`],
-          },
-          {
-            dayEvent: "05",
-            monthEvent: "Nov",
-            nameEvent: "Sienna private dining room with stephane Brunn",
-            addressEvent: "204 E. Piazza Tommaso",
-            iconAddress: [`fas`, `location-dot`],
-          },
-        ],
-      },
+      mainDataLayout,
     };
   },
 
   components: {
     Listcard,
     Carousel,
+  },
+
+  created() {
+    console.log(mainDataLayout);
   },
 };
 </script>
@@ -180,15 +25,15 @@ export default {
   <main>
     <!-- Section jumbotron -->
     <section class="jumbotron carousel">
-      <Carousel :screenImages="jumbotron" />
+      <Carousel :screenImages="mainDataLayout.jumbotron" />
     </section>
     <!-- Section card images -->
     <section>
-      <Listcard :listImages="cardsImages" />
+      <Listcard :listImages="mainDataLayout.cardsImages" />
     </section>
     <!-- Section carousel testimonials -->
     <section class="carousel">
-      <Carousel :screenImages="testimonials" />
+      <Carousel :screenImages="mainDataLayout.testimonials" />
     </section>
     <!-- Section Special Product -->
     <section class="specials">
@@ -197,11 +42,16 @@ export default {
       </div>
       <div class="specials-main">
         <ul>
-          <li class="special-text">{{ listOfferts[0].title }}</li>
-          <li class="pb-2 description">
-            {{ listOfferts[0].description }}
+          <li class="special-text">
+            {{ mainDataLayout.listOfferts[0].title }}
           </li>
-          <li v-for="offert in listOfferts[0].offerts" class="d-flex gap-2">
+          <li class="pb-2 description">
+            {{ mainDataLayout.listOfferts[0].description }}
+          </li>
+          <li
+            v-for="offert in mainDataLayout.listOfferts[0].offerts"
+            class="d-flex gap-2"
+          >
             <div class="col-1 special-price">&dollar;{{ offert.price }}</div>
             <div>
               <p class="special-text secondary">{{ offert.name }}</p>
@@ -217,13 +67,13 @@ export default {
     </section>
     <!-- Section card persons -->
     <section>
-      <Listcard :listImages="cardsPersons" />
+      <Listcard :listImages="mainDataLayout.cardsPersons" />
     </section>
     <!-- Section card clients -->
     <section class="logo-clients">
       <div class="container">
         <div class="row">
-          <div v-for="client in cardsClients" class="col">
+          <div v-for="client in mainDataLayout.cardsClients" class="col">
             <img :src="client.imgPath" alt="" />
           </div>
         </div>
@@ -232,14 +82,17 @@ export default {
     <!-- Section choose Product -->
     <section>
       <div class="text-center title-product">
-        <span>{{ product.subtitleProduct }}</span>
-        <h4 class="mb-2">{{ product.titleProduct }}</h4>
-        <p>{{ product.description }}</p>
+        <span>{{ mainDataLayout.product.subtitleProduct }}</span>
+        <h4 class="mb-2">{{ mainDataLayout.product.titleProduct }}</h4>
+        <p>{{ mainDataLayout.product.description }}</p>
       </div>
 
       <div class="container-fluid">
         <div class="row gap-5">
-          <div v-for="product in product.listProducts" class="col">
+          <div
+            v-for="product in mainDataLayout.product.listProducts"
+            class="col"
+          >
             <div class="card-product">
               <div class="card-media">
                 <img :src="product.img" alt="" />
@@ -268,10 +121,10 @@ export default {
       <div class="events-main">
         <ul>
           <li class="events-text smaller">
-            {{ event.subtitleEvent }}
+            {{ mainDataLayout.event.subtitleEvent }}
           </li>
-          <li class="events-text mb-2">{{ event.title }}</li>
-          <li v-for="event in event.programEvents" class="event">
+          <li class="events-text mb-2">{{ mainDataLayout.event.title }}</li>
+          <li v-for="event in mainDataLayout.event.programEvents" class="event">
             <div class="col-1">
               <p class="events-date">
                 {{ event.dayEvent }}
