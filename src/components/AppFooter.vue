@@ -96,8 +96,10 @@ export default {
             <!-- Day Hours -->
             <li v-for="day in workHours.weekHours">
               <ul class="my-3 footer-text">
-                <li>{{ day.day }}</li>
-                <li v-if="day.closed">{{ day.closed }}</li>
+                <li class="day-hour">{{ day.day }}</li>
+                <li v-if="day.closed" class="day-closed">
+                  {{ day.closed }}
+                </li>
                 <li>{{ day.hours }}</li>
               </ul>
             </li>
@@ -172,5 +174,14 @@ export default {
   background-image: url("../../public/img/layout/footer-img-1.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.day-hour {
+  color: #b48d3a;
+  font-weight: 600;
+}
+
+.day-closed {
+  color: #d2401e;
 }
 </style>
