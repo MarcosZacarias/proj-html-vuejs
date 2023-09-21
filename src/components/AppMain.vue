@@ -138,6 +138,34 @@ export default {
           },
         ],
       },
+
+      event: {
+        title: "Delish Pizza Deals",
+        subtitleEvent: "Made with love",
+        programEvents: [
+          {
+            dayEvent: "02",
+            monthEvent: "Nov",
+            nameEvent: "Traditional Neapolitan Pies in Kyoto Pizza Mercato",
+            addressEvent: "204 E. Piazza Tommaso",
+            iconAddress: [`fas`, `location-dot`],
+          },
+          {
+            dayEvent: "03",
+            monthEvent: "Nov",
+            nameEvent: "Terarazza Patio Dining space opening this Weekend",
+            addressEvent: "204 E. Piazza Tommaso",
+            iconAddress: [`fas`, `location-dot`],
+          },
+          {
+            dayEvent: "05",
+            monthEvent: "Nov",
+            nameEvent: "Sienna private dining room with stephane Brunn",
+            addressEvent: "204 E. Piazza Tommaso",
+            iconAddress: [`fas`, `location-dot`],
+          },
+        ],
+      },
     };
   },
 
@@ -236,23 +264,35 @@ export default {
       </div>
     </section>
     <!-- Section events -->
-    <section class="d-flex">
-      <div class="events">
+    <section class="events">
+      <div class="events-main">
         <ul>
-          <li>{{ listOfferts[0].title }}</li>
-          <li class="pb-2">{{ listOfferts[0].description }}</li>
-          <li v-for="offert in listOfferts[0].offerts" class="d-flex gap-2">
-            <div>&dollar; {{ offert.price }}</div>
+          <li class="events-text smaller">
+            {{ event.subtitleEvent }}
+          </li>
+          <li class="events-text mb-2">{{ event.title }}</li>
+          <li v-for="event in event.programEvents" class="event">
+            <div class="col-1">
+              <p class="events-date">
+                {{ event.dayEvent }}
+              </p>
+              <p class="events-text secondary">
+                {{ event.monthEvent }}
+              </p>
+            </div>
             <div>
-              <p>{{ offert.name }}</p>
-              <p>{{ offert.description }}</p>
+              <p class="events-text secondary">{{ event.nameEvent }}</p>
+              <p class="events-text smaller text-capitalize">
+                <span v-if="event.iconAddress">
+                  <font-awesome-icon :icon="event.iconAddress" />
+                </span>
+                {{ event.addressEvent }}
+              </p>
             </div>
           </li>
         </ul>
       </div>
-      <div class="w-50">
-        <img src="../../public/img/layout/h3-img-5a.jpg" alt="" />
-      </div>
+      <div class="events-aside"></div>
     </section>
     <!-- Section book table -->
     <section>

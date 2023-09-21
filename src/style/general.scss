@@ -62,6 +62,7 @@ body {
     }
   }
 }
+
 section.specials {
   height: 700px;
   display: flex;
@@ -154,17 +155,61 @@ section.specials {
   }
 }
 
-.events {
-  width: 50%;
-
-  color: #ffffff;
-
-  background-image: url("../../../public/img/layout/cielostellato.PNG");
-  background-size: cover;
-
+section.events {
+  height: 700px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  .events-main {
+    width: 50%;
+
+    color: #ffffff;
+
+    background-image: url("../../../public/img/layout/cielostellato.PNG");
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      width: 50%;
+    }
+
+    li.event {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding-bottom: 2rem;
+      border-bottom: #b1862b 1px dotted;
+    }
+
+    .events-text {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .events-text.secondary {
+      font-size: 1.2rem;
+    }
+
+    .events-text.smaller {
+      font-size: 0.7rem;
+      font-weight: normal;
+      color: #d2401e;
+      padding: 0.5rem 0;
+    }
+
+    .events-date {
+      color: #d2401e;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  .events-aside {
+    width: 50%;
+    background-image: url("../../public/img/layout/h3-img-5a.jpg");
+    background-size: cover;
+  }
 }
 
 .book-table-bg {
