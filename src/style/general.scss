@@ -90,6 +90,19 @@ body {
   }
 }
 
+.img-all-screen {
+  background-image: url("../../public/img/layout/h3-background-img.jpg");
+  height: 90vh;
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  p {
+    width: 30%;
+    line-height: 1;
+  }
+}
+
 section.specials {
   height: 700px;
   display: flex;

@@ -68,6 +68,11 @@ const mainDataLayout = {
       ],
     },
   ],
+
+  imgAllScreen: {
+    quote: "Go Ahead and build yuor own pizza we won't judge!",
+  },
+
   cardsPersons: [
     {
       imgPath: "../../public/img/layout/h1-team-1a-700x700.jpg",

@@ -79,8 +79,10 @@ export default {
       </div>
     </section>
     <!-- Section image all-screen -->
-    <section>
-      <img src="../../public/img/layout/h3-background-img.jpg" alt="" />
+    <section class="img-all-screen center">
+      <div class="container">
+        <p>{{ mainDataLayout.imgAllScreen.quote }}</p>
+      </div>
     </section>
     <!-- Section card persons -->
     <section>
